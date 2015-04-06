@@ -92,6 +92,7 @@ public class LeanbackBrowseFragment extends BrowseFragment {
         bgHelper = new BackgroundHelper(getActivity());
         bgHelper.prepareBackgroundManager();
 
+        updateRecommendations();
     }
 
     @Override
@@ -128,4 +129,8 @@ public class LeanbackBrowseFragment extends BrowseFragment {
         };
     }
 
+    private void updateRecommendations() {
+        Intent recommendationIntent = new Intent(getActivity(), RecommendationsService.class);
+        getActivity().startService(recommendationIntent);
+    }
 }
