@@ -359,7 +359,7 @@ public class PlaybackOverlayFragment extends android.support.v17.leanback.app.Pl
         VideoDataManager manager = new VideoDataManager(getActivity(), getLoaderManager(), VideoItemContract.VideoItem.buildDirUri(), rowContents );
         manager.startDataLoading();
 
-        HeaderItem headerItem = new HeaderItem(0, "You may also like", null);
+        HeaderItem headerItem = new HeaderItem(0, "You may also like");
         mRowsAdapter.add(new ListRow(headerItem, manager.getItemList()));
     }
 

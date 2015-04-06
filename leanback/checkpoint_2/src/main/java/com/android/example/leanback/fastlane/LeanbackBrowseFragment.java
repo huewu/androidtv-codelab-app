@@ -67,7 +67,7 @@ public class LeanbackBrowseFragment extends BrowseFragment {
             VideoDataManager manager = new VideoDataManager(getActivity(), getLoaderManager(), VideoItemContract.VideoItem.buildDirUri(), rowContents );
             manager.startDataLoading();
 
-            HeaderItem headerItem = new HeaderItem(position, HEADERS[position], null);
+            HeaderItem headerItem = new HeaderItem(position, HEADERS[position]);
             mRowsAdapter.add(new ListRow(headerItem, manager.getItemList()));
         }
 

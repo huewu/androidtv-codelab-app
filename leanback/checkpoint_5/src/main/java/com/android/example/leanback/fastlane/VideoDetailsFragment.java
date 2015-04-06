@@ -142,7 +142,7 @@ public class VideoDetailsFragment extends DetailsFragment {
             CursorObjectAdapter rowAdapter = new CursorObjectAdapter(new SinglePresenterSelector(new CardPresenter()));
             VideoDataManager manager  = new VideoDataManager(getActivity(),getLoaderManager(), VideoItemContract.VideoItem.buildDirUri(),rowAdapter);
             manager.startDataLoading();
-            HeaderItem header = new HeaderItem(0, subcategories[0], null);
+            HeaderItem header = new HeaderItem(0, subcategories[0]);
             adapter.add(new ListRow(header, rowAdapter));
             setAdapter(adapter);
             // <END>
